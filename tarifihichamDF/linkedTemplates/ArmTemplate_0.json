@@ -71,7 +71,7 @@
 							{
 								"activity": "Transform Data",
 								"dependencyConditions": [
-									"Completed"
+									"Succeeded"
 								]
 							}
 						],
@@ -123,7 +123,7 @@
 					"recurrence": {
 						"frequency": "Minute",
 						"interval": 5,
-						"startTime": "2023-09-27T12:00:00",
+						"startTime": "2023-09-27T14:50:00",
 						"timeZone": "Morocco Standard Time"
 					}
 				}
