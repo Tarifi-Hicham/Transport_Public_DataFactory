@@ -1,8 +1,8 @@
 {
-	"name": "Generate files",
+	"name": "Transform files",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -14,18 +14,10 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Day",
-				"interval": 10,
+				"frequency": "Minute",
+				"interval": 5,
 				"startTime": "2023-09-27T18:00:00",
-				"timeZone": "Morocco Standard Time",
-				"schedule": {
-					"minutes": [
-						0
-					],
-					"hours": [
-						18
-					]
-				}
+				"timeZone": "Morocco Standard Time"
 			}
 		}
 	}
