@@ -45,36 +45,9 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Generate files",
+						"name": "Transform Data",
 						"type": "DatabricksNotebook",
 						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Repos/htarifi.ext@simplonformations.onmicrosoft.com/Public_Transport_DataBricks/create csv files"
-						},
-						"linkedServiceName": {
-							"referenceName": "AzureDatabricks1",
-							"type": "LinkedServiceReference"
-						}
-					},
-					{
-						"name": "Notebook1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [
-							{
-								"activity": "Generate files",
-								"dependencyConditions": [
-									"Completed"
-								]
-							}
-						],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -103,12 +76,12 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Generate files')]",
+			"name": "[concat(parameters('factoryName'), '/Transform files')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -121,18 +94,10 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Day",
-						"interval": 10,
+						"frequency": "Minute",
+						"interval": 5,
 						"startTime": "2023-09-27T18:00:00",
-						"timeZone": "Morocco Standard Time",
-						"schedule": {
-							"minutes": [
-								0
-							],
-							"hours": [
-								18
-							]
-						}
+						"timeZone": "Morocco Standard Time"
 					}
 				}
 			},
