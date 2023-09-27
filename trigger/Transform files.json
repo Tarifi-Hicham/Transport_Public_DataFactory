@@ -2,7 +2,7 @@
 	"name": "Transform files",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Minute",
-				"interval": 5,
+				"interval": 3,
 				"startTime": "2023-09-27T14:50:00",
 				"timeZone": "Morocco Standard Time"
 			}
