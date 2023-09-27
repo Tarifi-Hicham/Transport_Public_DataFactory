@@ -96,7 +96,7 @@
 					"recurrence": {
 						"frequency": "Minute",
 						"interval": 5,
-						"startTime": "2023-09-27T18:00:00",
+						"startTime": "2023-09-27T12:00:00",
 						"timeZone": "Morocco Standard Time"
 					}
 				}
